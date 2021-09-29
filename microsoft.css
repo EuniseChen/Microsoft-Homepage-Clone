@@ -115,6 +115,8 @@ nav {
 }
 
 /* -----------------------------------main>carousel----------------------------- */
+
+.swiper-slide,
 .carousel-container {
     position : relative;
     width    : 100%;
@@ -124,12 +126,21 @@ nav {
 }
 
 .carousel-pic {
-    position        : absolute;
-    width           : 100%;
-    height          : 100%;
-    background-image: url(./images/main/surfacego/1600.600.jfif);
-    background-size : cover;
+    position: absolute;
+    width   : 100%;
+    height  : 100%;
+
+    background-size: cover;
 }
+
+.slide-1 {
+    background-image: url(./images/main/surfacego/1600.600.jfif);
+}
+
+.slide-2 {
+    background-image: url(./images/main/surface-laptop-go/1600.600.jfif);
+}
+
 
 .carousel-description {
     position       : relative;
@@ -141,14 +152,14 @@ nav {
 }
 
 .carousel-description h2 {
-    font-size     : 34px;
-    font-weight   : 600;
+    font-size    : 34px;
+    font-weight  : 600;
     margin-bottom: 15px;
 }
 
 .carousel-description p {
-    width         : 520px;
-    font-size     : 15px;
+    width        : 520px;
+    font-size    : 15px;
     margin-bottom: 30px;
 }
 
@@ -180,6 +191,16 @@ nav {
 .buy-now-btn:hover>i {
     transform          : translateX(4px);
     transition-duration: .2s;
+}
+
+.swiper .swiper-pagination-bullet-active {
+    background-color: black;
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+    border-radius: 50%;
+    color        : grey;
 }
 
 /* --------------------------------main>quicklinks------------------ */
@@ -358,8 +379,8 @@ ul {
     display        : flex;
     justify-content: space-between;
     font-size      : 12px;
-    margin: 0;
-    padding: 0;
+    margin         : 0;
+    padding        : 0;
 }
 
 .language>i {
@@ -371,9 +392,9 @@ ul {
 }
 
 .base-nav {
-    display: flex;
+    display  : flex;
     flex-wrap: wrap;
-    gap    : 23px;
+    gap      : 23px;
 }
 
 .base-lists:hover {
@@ -399,8 +420,12 @@ ul {
 }
 
 @media screen and (max-width: 1260px) {
-    .carousel-pic {
+    .slide-1 {
         background-image: url(./images/main/surfacego/1259.472.jfif);
+    }
+
+    .slide-2 {
+        background-image: url(./images/main/surface-laptop-go/1259.472.jfif);
     }
 
     #side-product .carousel-pic {
@@ -425,8 +450,12 @@ ul {
         width: 340px;
     }
 
-    .carousel-pic {
+    .slide-1 {
         background-image: url(./images/main/surfacego/1083.609.webp);
+    }
+
+    .slide-2 {
+        background-image: url(./images/main/surface-laptop-go/1083.609.jfif);
     }
 
     #side-product .carousel-pic {
@@ -536,30 +565,37 @@ ul {
 
     .carousel-pic {
         position: relative;
-        height: 56.19vw;
+        height  : 56.19vw;
+    }
+
+    .slide-1 {
         background-image: url(./images/main/surfacego/767.431.jfif);
     }
 
+    .slide-2 {
+        background-image: url(./images/main/surface-laptop-go/767.431.jfif);
+    }
+
     #side-product .carousel-pic {
-        height: 56.19vw;
+        height          : 56.19vw;
         background-image: url(./images/main/onedrive/767.431.webp);
     }
 
     .carousel-description {
-       align-items: center;
-       text-align: center;
-        height: 320px;
-        padding: 0 60px;
-        background-color:#e6e6e6;
+        align-items     : center;
+        text-align      : center;
+        height          : 320px;
+        padding         : 0 60px;
+        background-color: #e6e6e6;
     }
 
     .carousel-description h2 {
-        font-size: 20px;
+        font-size    : 20px;
         margin-bottom: 6px;
     }
 
     .carousel-description p {
-        width: 100%;
+        width        : 100%;
         margin-bottom: 15px;
     }
 
@@ -585,7 +621,7 @@ ul {
 
     .base-column {
         flex-wrap: wrap;
-        gap: 20px;
+        gap      : 20px;
     }
 
     .language {
@@ -598,15 +634,22 @@ ul {
 @media screen and (max-width: 539px) {
     .carousel-pic {
         height: 56.21vw;
+    }
+
+    .slide-1 {
         background-image: url(./images/main/surfacego/539.303.jfif);
     }
 
+    .slide-2 {
+        background-image: url(./images/main/surface-laptop-go/539.303.jfif);
+    }
+
     #side-product .carousel-pic {
-        height: 56.21vw;
+        height          : 56.21vw;
         background-image: url(./images/main/onedrive/539.303.webp);
     }
 
-    
+
 
     .column {
         width: 100%;
@@ -616,9 +659,8 @@ ul {
         font-size: 18px;
     }
 
-    footer
-    .footer-column {
+    footer .footer-column {
         width: 100%;
     }
-    
+
 }

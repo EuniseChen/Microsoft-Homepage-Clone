@@ -12,6 +12,7 @@
     <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -84,22 +85,54 @@
     <main>
         <section id="carousel">
             <div class="container">
-                <div class="carousel-container">
-                    <div class="carousel-pic">
-                    </div>
-                    <div class="carousel-description">
-                        <h2>隨身型動力</h2>
-                        <p>
-                            Surface GO 2 結合了平板電腦的多功能性與筆記型電腦的可攜性，非常適合用來處理日常工作、家庭作業和玩樂
-                        </p>
-                        <div class="btn">
-                            <a href="" class="buy-now-btn">
-                                <span> 立即選購</span>
-                                <i class="fas fa-chevron-right"></i>
-                            </a>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="carousel-container">
+                                <div class="carousel-pic slide-1"></div>
+                                <div class="carousel-description">
+                                    <h2>隨身型動力</h2>
+                                    <p>
+                                        Surface GO 2 結合了平板電腦的多功能性與筆記型電腦的可攜性，非常適合用來處理日常工作、家庭作業和玩樂
+                                    </p>
+                                    <div class="btn">
+                                        <a href="" class="buy-now-btn">
+                                            <span> 立即選購</span>
+                                            <i class="fas fa-chevron-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="carousel-container">
+                                <div class="carousel-pic slide-2"></div>
+                                <div class="carousel-description">
+                                    <h2>Surface Laptop Go</h2>
+                                    <p>
+                                        運用我們所推出最輕巧的 Surface 筆記型電腦，善加利用每一天
+                                    </p>
+                                    <div class="btn">
+                                        <a href="" class="buy-now-btn">
+                                            <span> 立即選購</span>
+                                            <i class="fas fa-chevron-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
+
+
+            </div>
             </div>
         </section>
 
@@ -195,7 +228,7 @@
                         </p>
                         <div class="btn">
                             <a href="" class="buy-now-btn">
-                                <span > 深入了解</span>
+                                <span> 深入了解</span>
                                 <i class="fas fa-chevron-right"></i>
                             </a>
                         </div>
@@ -356,6 +389,32 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
 </body>
 
 </html>
